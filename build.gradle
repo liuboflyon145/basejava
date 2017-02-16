@@ -33,6 +33,8 @@ repositories {
 dependencies {
 	compile group: 'org.aspectj', name: 'aspectjrt', version: '1.6.9'
 	compile('org.springframework.boot:spring-boot-starter')
+	compile group: 'com.thoughtworks.xstream', name: 'xstream', version: '1.4.9'
 	compile group: 'org.springframework', name: 'spring-aop', version: '4.3.2.RELEASE'
+	compile group: 'javassist', name: 'javassist', version: '3.12.1.GA'
 	testCompile('org.springframework.boot:spring-boot-starter-test')
 }
