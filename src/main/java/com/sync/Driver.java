@@ -11,13 +11,14 @@ public class Driver {
 
         CountDownLatch start = new CountDownLatch(5);
 //        CountDownLatch done = new CountDownLatch(CAR_NUM);
-        for (int i = 0; i < CAR_NUM; i++) {
+        for (int i = 0; i < 9; i++) {
             System.out.println("order i = "+i);
             new Thread(new Worker(start)).start();
             System.out.println("线程"+Thread.currentThread().getId()+"启动完成");
             start.countDown();
             System.out.println("等待所有任务执行完成");
         }
+        System.out.println(start.getCount());
         start.await();
     }
 }

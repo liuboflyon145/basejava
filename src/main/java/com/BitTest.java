@@ -6,8 +6,12 @@ package com;
 public class BitTest {
     private static final int MAXIMUM_CAPACITY = 100000;
     public static void main(String[] args) {
-        bitMove();
+//        bitMove();
         //System.out.println(tableSizeFor(3));
+        String a = new String("0123456789");
+        String b = new String();
+        System.arraycopy(a,3,b,0,3);
+        System.out.println(b);
     }
     private static void bitMove(){
         int number = 10;
@@ -21,6 +25,8 @@ public class BitTest {
     }
 
     private static void prn(int number) {
+        String str = new String ();
+        "ssssss".substring(9);
         System.out.println("this number is :"+number);
     }
 

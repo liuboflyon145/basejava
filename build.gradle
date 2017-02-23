@@ -32,6 +32,7 @@ repositories {
 
 dependencies {
 	compile group: 'org.aspectj', name: 'aspectjrt', version: '1.6.9'
+	compile group: 'com.alibaba', name: 'dubbo', version: '2.5.3'
 	compile('org.springframework.boot:spring-boot-starter')
 	compile group: 'com.thoughtworks.xstream', name: 'xstream', version: '1.4.9'
 	compile group: 'org.springframework', name: 'spring-aop', version: '4.3.2.RELEASE'
