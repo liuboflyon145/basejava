@@ -9,4 +9,9 @@ public class DemoServiceImpl implements DemoService {
         return "Hello " + name;
     }
 
+    @Override
+    public String getInfo(String key) {
+        return key+" info ";
+    }
+
 }

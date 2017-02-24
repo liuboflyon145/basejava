@@ -4,17 +4,18 @@ buildscript {
 	}
 	repositories {
 		mavenCentral()
+		maven { url 'http://repo.spring.io/libs-release' }
 		maven { url "https://repo.spring.io/snapshot" }
 		maven { url "https://repo.spring.io/milestone" }
 	}
 	dependencies {
-		classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+//		classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
 	}
 }
 
 apply plugin: 'java'
 apply plugin: 'eclipse'
-apply plugin: 'spring-boot'
+//apply plugin: 'spring-boot'
 
 jar {
 	baseName = 'demo'
@@ -31,11 +32,15 @@ repositories {
 
 
 dependencies {
+
 	compile group: 'org.aspectj', name: 'aspectjrt', version: '1.6.9'
 	compile group: 'com.alibaba', name: 'dubbo', version: '2.5.3'
-	compile('org.springframework.boot:spring-boot-starter')
+//	compile('org.springframework.boot:spring-boot-starter')
 	compile group: 'com.thoughtworks.xstream', name: 'xstream', version: '1.4.9'
 	compile group: 'org.springframework', name: 'spring-aop', version: '4.3.2.RELEASE'
 	compile group: 'javassist', name: 'javassist', version: '3.12.1.GA'
-	testCompile('org.springframework.boot:spring-boot-starter-test')
+	compile group: 'com.101tec', name: 'zkclient', version: '0.2'
+
+
+//	testCompile('org.springframework.boot:spring-boot-starter-test')
 }
