@@ -20,8 +20,8 @@ public class SortTask extends RecursiveAction {
 
     public SortTask(long[] array, int lo, int hi) {
         this.array = array;
-        this.lo = 0;
-        this.hi = array.length - 1;
+        this.lo = lo;
+        this.hi = hi;
     }
 
     private void swap(long[] array, int i, int j) {

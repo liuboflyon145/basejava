@@ -4,12 +4,13 @@ import org.aspectj.lang.annotation.After;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
 import org.aspectj.lang.annotation.Pointcut;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 @Aspect
 @Component
 public class CheckUser {
-  
+
     @Pointcut("execution(* com.aop.*.find*(..))")
     public void checkUser(){  
         System.out.println("**************The System is Searching Information For You****************");  

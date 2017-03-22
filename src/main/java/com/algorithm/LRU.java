@@ -11,16 +11,16 @@ import java.util.List;
  */
 public class LRU {
     public static void main(String[] args) {
-		LimitQueue<String> list = new LimitQueue<String>(5);
+		LimitQueue<String> queue = new LimitQueue<String>(5);
 		Integer[] array = new  Integer[]{1, 2, 5, 3, 4, 6,1, 4, 3, 6, 7, 8, 3, 9 };
 		List<Integer> page = new ArrayList<Integer>();
 		for(Integer i :array){
-			if(list.contains(i.toString())){
-				list.remove(i);
+			if(queue.contains(i.toString())){
+				queue.remove(i);
 			}else{
 				page.add(i);
 			}
-			list.offer(i.toString()); 
+			queue.offer(i.toString());
 		}
 		System.out.println("缺页数量"+page.size()+",缺页数据"+page.toString());
 	}
