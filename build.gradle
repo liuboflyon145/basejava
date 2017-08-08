@@ -40,8 +40,6 @@ dependencies {
 	compile group: 'org.apache.storm', name: 'storm-core', version: '1.0.3'
 	compile group: 'org.apache.storm', name: 'storm-kafka', version: '1.0.3'
 	compile group: 'org.apache.spark', name: 'spark-core_2.11', version: '2.1.0'
-
-
-
+	compile group: 'com.dangdang', name: 'sharding-jdbc-core',version: '1.5.0'
 	testCompile('org.springframework.boot:spring-boot-starter-test')
 }

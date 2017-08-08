@@ -12,18 +12,18 @@ public class SemaPhoreTest {
         final Semaphore semp = new Semaphore(5);
         // 模拟20个客户端访问
         for (int index = 0; index < 50; index++) {
-            final int NO = index;
+            final int NO = index+1;
             Runnable run = new Runnable() {
                 public void run() {
                     try {
                         // 获取许可
                         semp.acquire();
-                        System.out.println("Accessing: " + NO);
+                        System.out.println(Thread.currentThread().getName()+"：Accessing: " + NO +" availableSemaphore : "+semp.availablePermits());
                         Thread.sleep((long) (Math.random() * 6000));
                         // 访问完后，释放
                         semp.release();
                         //availablePermits()指的是当前信号灯库中有多少个可以被使用
-                        System.out.println("-----------------" + semp.availablePermits());
+                        System.out.println(Thread.currentThread().getName()+"：剩余信号量个数：-----------------" + semp.availablePermits());
                     } catch (InterruptedException e) {
                         e.printStackTrace();
                     }

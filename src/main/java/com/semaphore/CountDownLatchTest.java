@@ -20,6 +20,7 @@ public class CountDownLatchTest {
         for (int i = 0; i < threads.length; i++) {
             threads[i].start();
             try {
+                System.out.println("countDownLatch个数为："+latch.getCount());
                 System.out.println("第"+(i+1)+"个线程执行中。。。。。。");
                 latch.countDown();
                 System.out.println("当前数为:"+latch.getCount());
